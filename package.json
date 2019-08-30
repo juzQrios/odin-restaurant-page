@@ -1,0 +1,24 @@
+{
+  "name": "odin-restaurant-page",
+  "version": "1.0.0",
+  "description": "A simple, dynamically rendered restaurant homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juzQrios/odin-restaurant-page.git"
+  },
+  "author": "juzQrios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juzQrios/odin-restaurant-page/issues"
+  },
+  "homepage": "https://github.com/juzQrios/odin-restaurant-page#readme",
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
