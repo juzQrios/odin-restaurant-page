@@ -1,5 +1,9 @@
+import contentLoader from './contentLoader';
+
 const contact = (() => {
-  function create() {
+  const name = 'Contact';
+
+  function switchTo() {
     const contactArticle = document.createElement('article');
     contactArticle.className = 'contact';
     contactArticle.innerHTML = `
@@ -13,10 +17,10 @@ const contact = (() => {
         </div>
       </section>
     `;
-    return contactArticle;
+    contentLoader.load(contactArticle);
   }
 
-  return { create };
+  return { name, switchTo };
 })();
 
 export default contact;

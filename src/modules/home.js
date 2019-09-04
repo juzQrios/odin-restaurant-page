@@ -1,5 +1,9 @@
+import contentLoader from './contentLoader';
+
 const home = (() => {
-  function create() {
+  const name = 'Home';
+
+  function switchTo() {
     const homeArticle = document.createElement('article');
     homeArticle.className = 'home';
     homeArticle.innerHTML = `
@@ -12,10 +16,10 @@ const home = (() => {
         <div>from The Odin Project</div>
       </section>
     `;
-    return homeArticle;
+    contentLoader.load(homeArticle);
   }
 
-  return { create };
+  return { name, switchTo };
 })();
 
 export default home;

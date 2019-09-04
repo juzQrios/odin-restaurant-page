@@ -1,5 +1,9 @@
+import contentLoader from './contentLoader';
+
 const about = (() => {
-  function create() {
+  const name = 'About';
+
+  function switchTo() {
     const aboutArticle = document.createElement('article');
     aboutArticle.className = 'about';
     aboutArticle.innerHTML = `
@@ -13,10 +17,10 @@ const about = (() => {
         </div>
       </section>
     `;
-    return aboutArticle;
+    contentLoader.load(aboutArticle);
   }
 
-  return { create };
+  return { name, switchTo };
 })();
 
 export default about;

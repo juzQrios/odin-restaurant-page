@@ -1,5 +1,9 @@
+import contentLoader from './contentLoader';
+
 const food = (() => {
-  function create() {
+  const name = 'Food';
+
+  function switchTo() {
     const foodArticle = document.createElement('article');
     foodArticle.className = 'food';
     foodArticle.innerHTML = `
@@ -13,10 +17,10 @@ const food = (() => {
         </div>
       </section>
     `;
-    return foodArticle;
+    contentLoader.load(foodArticle);
   }
 
-  return { create };
+  return { name, switchTo };
 })();
 
 export default food;
