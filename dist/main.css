@@ -52,58 +52,60 @@ table {
 CUSTOM STYLES
 -------------------------------------*/
 
-/* 
-  Global
-*/
+/* -----------::Colors::------------ */
+/* background: #262626 */
+/* font color: #D8D8D8 */
+/* primary: #595959 */
+/* secondary: #8C8C8C */
+
+/* Global */
 body {
-  background-color: #BF4B6A;
-  color: #F2F2F2;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #262626;
+  color: #d8d8d8;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 110px auto;
+  grid-template-rows: 100vh;
 }
 
-/*
-  Navbar
-*/
-nav {
-  padding: 1rem;
-  background-color: #590219;
+/* Navbar */
+.navbar {
+  background-color: #595959;
+  border-right: 4px solid #8c8c8c;
 }
-
-.brand {
-  font-size: 1.5rem;
+.nav {
+  width: 100%;
+  height: 100%;
 }
-
-
-/*
-  Intro
-*/
-
-header {
-  position: relative;
-  height: 500px;
-  overflow: hidden;
+.nav-item {
+  width: 100%;
+  height: 15vh;
 }
-header h1 {
-  position: absolute;
-  top: 92%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 4rem;
-}
-header img{
-  margin: -250px 0 0 0;
-}
-
-.description {
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  height: 160px;
+  align-items: center;
+}
+.nav-link.active {
+  background-color: #262626;
+  border: 4px solid #8c8c8c;
+}
+.nav-link:hover{
+  background-color: #8c8c8c;
+  color: #262626;
+}
+
+/* Content */
+
+.content {
+  padding: 2rem;
+  background-color: #262626;
 }
