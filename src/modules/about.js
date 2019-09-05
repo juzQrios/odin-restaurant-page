@@ -12,8 +12,8 @@ const about = (() => {
         <h3>About</h3>
       </header>
       <section class="description">
-        <div>
-          About the restaurant - History & Speciality.
+        <div class="placeholder">
+          About the restaurant - History & Speciality
         </div>
       </section>
     `;

@@ -12,7 +12,7 @@ const food = (() => {
         <h3>Food Menu</h3>
       </header>
       <section class="description">
-        <div>
+        <div class="placeholder">
           Gallery of available food in the restaurant
         </div>
       </section>

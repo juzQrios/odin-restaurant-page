@@ -12,7 +12,7 @@ const contact = (() => {
         <h3>Contact</h3>
       </header>
       <section class="description">
-        <div>
+        <div class="placeholder">
           Contact details like Address & such
         </div>
       </section>
