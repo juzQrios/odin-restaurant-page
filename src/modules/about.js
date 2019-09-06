@@ -1,12 +1,9 @@
-import contentLoader from './contentLoader';
+const name = 'About';
 
-const about = (() => {
-  const name = 'About';
-
-  function switchTo() {
-    const aboutArticle = document.createElement('article');
-    aboutArticle.className = 'about';
-    aboutArticle.innerHTML = `
+function switchTo() {
+  const aboutArticle = document.createElement('article');
+  aboutArticle.className = 'about';
+  aboutArticle.innerHTML = `
       <header class="main">
         <h1>Odin Restaurant</h1>
         <h3>About</h3>
@@ -17,10 +14,7 @@ const about = (() => {
         </div>
       </section>
     `;
-    contentLoader.load(aboutArticle);
-  }
+  return aboutArticle;
+}
 
-  return { name, switchTo };
-})();
-
-export default about;
+export default { name, switchTo };

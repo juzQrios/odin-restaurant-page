@@ -1,12 +1,9 @@
-import contentLoader from './contentLoader';
+const name = 'Home';
 
-const home = (() => {
-  const name = 'Home';
-
-  function switchTo() {
-    const homeArticle = document.createElement('article');
-    homeArticle.className = 'home';
-    homeArticle.innerHTML = `
+function switchTo() {
+  const homeArticle = document.createElement('article');
+  homeArticle.className = 'home';
+  homeArticle.innerHTML = `
       <header class="main">
         <h1>Odin Restaurant</h1>
         <div class="img-container">
@@ -26,10 +23,7 @@ const home = (() => {
         </div>
       </section>
     `;
-    contentLoader.load(homeArticle);
-  }
+  return homeArticle;
+}
 
-  return { name, switchTo };
-})();
-
-export default home;
+export default { name, switchTo };

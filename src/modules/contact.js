@@ -1,12 +1,9 @@
-import contentLoader from './contentLoader';
+const name = 'Contact';
 
-const contact = (() => {
-  const name = 'Contact';
-
-  function switchTo() {
-    const contactArticle = document.createElement('article');
-    contactArticle.className = 'contact';
-    contactArticle.innerHTML = `
+function switchTo() {
+  const contactArticle = document.createElement('article');
+  contactArticle.className = 'contact';
+  contactArticle.innerHTML = `
       <header class="main">
         <h1>Odin Restaurant</h1>
         <h3>Contact</h3>
@@ -17,10 +14,7 @@ const contact = (() => {
         </div>
       </section>
     `;
-    contentLoader.load(contactArticle);
-  }
+  return contactArticle;
+}
 
-  return { name, switchTo };
-})();
-
-export default contact;
+export default { name, switchTo };

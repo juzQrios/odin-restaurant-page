@@ -1,3 +1,4 @@
+import contentLoader from './modules/contentLoader';
 import home from './modules/home';
 import contact from './modules/contact';
 import about from './modules/about';
@@ -22,11 +23,13 @@ function main() {
   navList.addEventListener('click', (event) => {
     const clickedTab = event.target;
     const clickedTabIndex = clickedTab.dataset.index;
-    tabs[clickedTabIndex].switchTo();
+    const articleElement = tabs[clickedTabIndex].switchTo();
+    contentLoader.load(articleElement);
     document.querySelector('.active').classList.toggle('active');
     clickedTab.classList.toggle('active');
   });
-  home.switchTo();
+  const homeArticle = home.switchTo();
+  contentLoader.load(homeArticle);
   document.querySelector('.nav-link').classList.toggle('active');
 }
 
