@@ -1,11 +1,11 @@
-import contentLoader from './modules/contentLoader';
 import home from './modules/home';
 import contact from './modules/contact';
 import about from './modules/about';
 import food from './modules/food';
+import theme from './modules/theme';
 
 function main() {
-  const tabs = [home, contact, about, food];
+  const tabs = [home, contact, about, food, theme];
 
   // Navbar Tabs generation from `tabs` Array
   const navList = document.querySelector('#nav-list');
@@ -23,13 +23,13 @@ function main() {
   navList.addEventListener('click', (event) => {
     const clickedTab = event.target;
     const clickedTabIndex = clickedTab.dataset.index;
-    const articleElement = tabs[clickedTabIndex].switchTo();
-    contentLoader.load(articleElement);
+    tabs[clickedTabIndex].switchTo();
     document.querySelector('.active').classList.toggle('active');
     clickedTab.classList.toggle('active');
   });
-  const homeArticle = home.switchTo();
-  contentLoader.load(homeArticle);
+
+  // Loading home content on Initial Page Load
+  home.switchTo();
   document.querySelector('.nav-link').classList.toggle('active');
 }
 

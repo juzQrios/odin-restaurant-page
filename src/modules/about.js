@@ -1,3 +1,5 @@
+import contentLoader from './contentLoader';
+
 const name = 'About';
 
 function switchTo() {
@@ -14,7 +16,7 @@ function switchTo() {
         </div>
       </section>
     `;
-  return aboutArticle;
+  contentLoader.load(aboutArticle);
 }
 
 export default { name, switchTo };

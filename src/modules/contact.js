@@ -1,3 +1,5 @@
+import contentLoader from './contentLoader';
+
 const name = 'Contact';
 
 function switchTo() {
@@ -14,7 +16,7 @@ function switchTo() {
         </div>
       </section>
     `;
-  return contactArticle;
+  contentLoader.load(contactArticle);
 }
 
 export default { name, switchTo };
