@@ -53,10 +53,31 @@ CUSTOM STYLES
 -------------------------------------*/
 
 /* -----------::Colors::------------ */
-/* background: #262626 */
-/* font color: #D8D8D8 */
-/* primary: #595959 */
-/* secondary: #8C8C8C */
+
+:root {
+  --background-color: #262626;
+  --font-color: #D8D8D8;
+  --primary-color: #595959;
+  --secondary-color: #8C8C8C;
+
+  /* Theme 1 */
+  --t1-background-color: #262626;
+  --t1-font-color: #D8D8D8;
+  --t1-primary-color: #595959;
+  --t1-secondary-color: #8C8C8C;
+
+  /* Theme 2 */
+  --t2-background-color: #4C4272;
+  --t2-font-color: #F2EEBC;
+  --t2-primary-color: #726AA5;
+  --t2-secondary-color: #BABDF2;
+
+  /* Theme 3 */
+  --t3-background-color: #D85291;
+  --t3-font-color: #E0FBFF;
+  --t3-primary-color: #4C4272;
+  --t3-secondary-color: #BABDF2;
+}
 
 /* Global */
 *,
@@ -65,8 +86,8 @@ CUSTOM STYLES
   box-sizing: border-box;
 }
 body {
-  background-color: #262626;
-  color: #d8d8d8;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 img {
   width: 100%;
@@ -82,8 +103,7 @@ img {
 
 /* Navbar */
 .navbar {
-  background-color: #595959;
-  /* border-right: 4px solid #8c8c8c; */
+  background-color: var(--primary-color);
 }
 .nav {
   width: 100%;
@@ -105,19 +125,18 @@ img {
   border-left: 4px solid transparent;
 }
 .nav-link.active {
-  background-color: #262626;
-  border-left: 4px solid #8c8c8c;
+  background-color: var(--background-color);
+  border-left: 4px solid var(--secondary-color);
 }
 .nav-link:hover{
   opacity: 0.8;
-  border-left: 4px solid #8c8c8c;
+  border-left: 4px solid var(--secondary-color);
 }
 
 /* Content */
 
 .content {
   padding: 4rem;
-  background-color: #262626;
 }
 .placeholder {
   font-family: 'Courier New', Courier, monospace;
@@ -156,4 +175,60 @@ img {
   font-size: 1.5rem;
   padding: 2rem;
   text-align: center;
+}
+
+/* Theme */
+
+.theme-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.theme-container > * {
+  border: 4px solid #fff;
+  border-radius: 5px;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.theme-container > *:active {
+  opacity: 0.6;
+}
+
+.background {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+}
+
+.primary {
+  width: 100px;
+  height: 50px;
+  background-color: black;
+}
+
+.theme-1 .background {
+  background-color: var(--t1-background-color);
+}
+
+.theme-1 .primary {
+  background-color: var(--t1-primary-color);
+}
+
+.theme-2 .background {
+  background-color: var(--t2-background-color);
+}
+
+.theme-2 .primary {
+  background-color: var(--t2-primary-color);
+}
+
+.theme-3 .background {
+  background-color: var(--t3-background-color);
+}
+
+.theme-3>.primary {
+  background-color: var(--t3-primary-color);
 }
